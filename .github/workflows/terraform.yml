@@ -12,10 +12,8 @@ jobs:
   terraform:
     name: 'terraform plan'
     runs-on: ubuntu-latest
-    environment: production
-    env:
-      test: test
-
+    environment: testing
+  
     # Use the Bash shell regardless whether the GitHub Actions runner is ubuntu-latest, macos-latest, or windows-latest
     defaults:
       run:
