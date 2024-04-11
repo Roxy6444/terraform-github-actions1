@@ -1,4 +1,4 @@
-name: 'Terraform'
+name: 'terraform deploy to Azure'
 
 on:
   push:
@@ -10,9 +10,11 @@ permissions:
 
 jobs:
   terraform:
-    name: 'Terraform'
+    name: 'terraform plan'
     runs-on: ubuntu-latest
     environment: production
+    env:
+      test: test
 
     # Use the Bash shell regardless whether the GitHub Actions runner is ubuntu-latest, macos-latest, or windows-latest
     defaults:
